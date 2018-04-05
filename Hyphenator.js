@@ -3243,6 +3243,11 @@ Hyphenator = (function (window) {
                     compound = obj[key];
                 }
                 break;
+            case "basePath":
+                if (assert("basePath", "string")) {
+                    basePath = obj[key];
+                }
+                break;
             default:
                 onError(new Error("Hyphenator.config: property " + key + " not known."));
             }
